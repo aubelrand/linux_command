@@ -1,24 +1,58 @@
 ls       列出当前目录的所有文件
+
 cd ..    进入上层目录
+
 cd *     进入指定目录
+
 more     终端屏幕显示文本文件   q  退出
+
 kill *   杀进程
+
 ps -aux  查看所有进程
+
 top      查看进程               q  退出
+
 uptime   查看系统运行状态
+
 nohup    不挂断地运行命令  nohup command &
+
 passwd   修改密码
+
+ifconfig 显示或配置网络设备
+
 sudo     管理员权限
          sudo apt-get install python3-numpy 管理员权限安装python3的相关包
          python非官方的包url：http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
 mv       mv filename /home/.. 把filename移动到目录/home/..下
+
 cp       cp filename /home/.. 复制
+
 enca     enca -L zh_CN filename  返回filename的编码格式
          enca -L zh_CN -x UTF-8 filename  把filename编码为UTF-8格式
          enca -L zh_CN -x UTF-8 filename1 filename2 filename3
+
 rfkill list all 
          可以查看到例如无线wifi、蓝牙之类软硬件是否被锁住的信息
+
 rfill unblock 0
          可解锁序列号为0的软件锁定
+
 sudo tar -zxvf file.tar.gz  解压文件到当前目录
+
+latex: texlive+texmaker+支持中文
+       sudo apt-get install texlive  安装latex环境
+       sudo apt-get install latex-cjk-all 安装中文支持
+       sudo apt-get install texmaker 安装texmaker
+
+返回本机外网ip： curl icanhazip.com
+                curl -s www.123cha.com | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | head -n 1
+                w3m -no-cookie -dump www.123cha.com|grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
+                w3m -dump http://submit.apnic.net/templates/yourip.html | grep -P -o '(\d+\.){3}\d+'
+
+
+
+
+
+
 
